@@ -1,11 +1,16 @@
-function handleResponseFromAPI(promise) {
-  return promise
-    .then((response) => {
+export default function getFullResponseFromAPI(promise) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const response = { status: 200, body: 'Success' };
+      const rejected = new Error('');
+
+      if (promise) {
+        resolve(response);
+      } else {
+        reject(rejected);
+      }
+
       console.log('Got a response from the API');
-      return { status: 200, body: response };
-    })
-    .catch((error) => {
-      console.error(error);
-      return new Error('');
-    });
+    }, 1000);
+  });
 }
