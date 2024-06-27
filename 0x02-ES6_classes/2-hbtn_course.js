@@ -9,21 +9,21 @@ export default class HolbertonCourse {
     if (this._name === '') {
       return this._name;
     }
-    throw new Error('Name not valid');
+    throw new Error('Name must be a string');
   }
 
   getLength() {
     if (this._length >= 0) {
       return this._length;
     }
-    throw new Error('Length not valid');
+    throw new Error('Length must be a number');
   }
 
   getStudents() {
     if (this._students.length === 0) {
       return this._students;
     }
-    throw new Error('Students not valid');
+    throw new Error('Students must be an array of strings');
   }
 
   setName(newName) {
@@ -31,7 +31,7 @@ export default class HolbertonCourse {
       this._name = newName;
       return;
     }
-    throw new Error('Name not valid');
+    throw new Error('Name must be a string');
   }
 
   setLength(newLength) {
@@ -39,7 +39,7 @@ export default class HolbertonCourse {
       this._length = newLength;
       return;
     }
-    throw new Error('Length not valid');
+    throw new Error('Length must be a number');
   }
 
   setStudents(newStudents) {
