@@ -9,8 +9,13 @@ export default function getFullResponseFromAPI(promise) {
       } else {
         reject(rejected);
       }
-
-      console.log('Got a response from the API');
     }, 1000);
   });
 }
+getFullResponseFromAPI()
+  .then((response) => {
+    console.log('Got a response from the API');
+  })
+  .catch((rejected) => {
+    console.log('Got a response from the API');
+  })
