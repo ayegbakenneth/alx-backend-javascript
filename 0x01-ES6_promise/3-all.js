@@ -14,8 +14,7 @@ export default function handleProfileSignup() {
         })
         .catch((error) => {
           const rejected = 'Signup system offline';
-          console.error(rejected);
-          reject(rejected);
+          console.log(rejected);
         });
     }, 1000);
   });
