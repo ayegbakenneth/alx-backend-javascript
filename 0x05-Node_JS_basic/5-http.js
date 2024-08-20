@@ -11,7 +11,7 @@ const countStudents = (dataPath) => {
       }
 
       const rows = data.trim().split('\n');
-      const students = rows.slice(1).filter(rows => rows.trim() !== '');
+      const students = rows.slice(1).filter(row => row.trim() !== '');
 
       const columns = {};
 
@@ -25,7 +25,7 @@ const countStudents = (dataPath) => {
 
       let result = `Number of students: ${students.length}\n`;
       for (const [column, names] of Object.entries(columns)) {
-        result += `Number of students in ${field}: ${names.length}. List: ${names.join(', ')}\n`;
+        result += `Number of students in ${column}: ${names.length}. List: ${names.join(', ')}\n`;
       }
 
       resolve(result.trim());
